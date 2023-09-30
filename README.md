@@ -1,3 +1,3 @@
 ﻿My Resume
-# thanhchuong01.github.io
+# [Nguyen Thanh Chuon Resume](https://thanhchuong01.github.io). 
 #
