@@ -1,3 +1,3 @@
 ﻿My Resume
-# entry thanhchuong01.github.io
+# thanhchuong01.github.io
 #
