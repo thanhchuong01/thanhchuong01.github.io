@@ -98,4 +98,30 @@ body {
     font-style: normal;
 
 }
-  
+
+
+@media (max-width: 768px) {
+    .time-box {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+    .time-unit {
+        font-size: 0.8em;
+    }
+    .text {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .time-box {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .time-unit {
+        font-size: 0.6em;
+    }
+    .text {
+        font-size: 4rem;
+    }
+}
