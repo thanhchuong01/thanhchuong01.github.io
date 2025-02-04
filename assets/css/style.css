@@ -364,7 +364,7 @@ li {
 
 /* === Section Configure === */
 .main-content section {
-    padding: 30px 70px;
+    padding: 25px 50px 25px 70px;
     position: relative;
     border-bottom: solid 1px #EEE;
 }
@@ -871,6 +871,12 @@ li {
 .owl-theme .owl-controls {
     margin-top: 30px;
 }
+
+.margin-right {
+    display: inline-block;
+    margin-right: 10px;
+}
+
 
 /*-----------------------------------------------------------------*/
 /*                      RESPONSIVE                                  */
