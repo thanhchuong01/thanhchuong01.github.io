@@ -125,3 +125,25 @@ body {
         font-size: 3rem;
     }
 }
+
+/* Add this to styles.css */
+.mute-btn {
+  background: #fd130b;
+  color: #bd1414;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s;
+}
+
+.mute-btn:hover {
+  background: #f66f60;
+  color: #000;
+}
+
+.mute-btn:active {
+  background: #ffe082;
+}

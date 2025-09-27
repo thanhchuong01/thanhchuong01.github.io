@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 29, 2025 00:00:00").getTime();
+var countDownDate = new Date("Feb 17, 2026 00:00:00").getTime();
 
 function addLeadingZero(num) {
     return num < 10 ? '0' + num : num;
@@ -32,3 +32,38 @@ var x = setInterval(function() {
         document.getElementById("countdown").innerHTML = "CHÚC MỪNG NĂM MỚI";
     }
 }, 1000);
+
+// ...existing countdown code...
+
+const YT_VIDEO_ID = "yPZqgNQwous"; // Replace with your video ID
+
+const ytplayer = document.getElementById("bg-music");
+const muteBtn = document.getElementById("mute-btn");
+let isMuted = false;
+
+// Function to play music (unmuted by default)
+function playMusic() {
+    ytplayer.width = 0;
+    ytplayer.height = 0;
+    ytplayer.src = `https://www.youtube.com/embed/${YT_VIDEO_ID}?autoplay=1&mute=0`;
+    muteBtn.style.display = "inline-block";
+    muteBtn.textContent = "🔊";
+    isMuted = false;
+}
+
+// Function to toggle mute
+muteBtn.onclick = function () {
+    isMuted = !isMuted;
+    ytplayer.src = `https://www.youtube.com/embed/${YT_VIDEO_ID}?autoplay=1&mute=${isMuted ? 1 : 0}`;
+    muteBtn.textContent = isMuted ? "🔇" : "🔊";
+};
+
+// Auto play music (unmuted) when page loads
+playMusic();
+
+// When countdown ends, play music again (unmuted)
+if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "CHÚC MỪNG NĂM MỚI";
+    playMusic();
+}
