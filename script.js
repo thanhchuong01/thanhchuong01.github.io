@@ -33,37 +33,31 @@ var x = setInterval(function() {
     }
 }, 1000);
 
-// ...existing countdown code...
-
-const YT_VIDEO_ID = "yPZqgNQwous"; // Replace with your video ID
-
-const ytplayer = document.getElementById("bg-music");
+// YouTube Player Control
+const iframe = document.getElementById("bg-music");
 const muteBtn = document.getElementById("mute-btn");
-let isMuted = false;
+let isMuted = true;
 
-// Function to play music (unmuted by default)
-function playMusic() {
-    ytplayer.width = 0;
-    ytplayer.height = 0;
-    ytplayer.src = `https://www.youtube.com/embed/${YT_VIDEO_ID}?autoplay=1&mute=0`;
-    muteBtn.style.display = "inline-block";
-    muteBtn.textContent = "🔊";
-    isMuted = false;
+// Function to send commands to the YouTube iframe
+function sendCommandToPlayer(command) {
+    iframe.contentWindow.postMessage(
+        JSON.stringify({
+            event: "command",
+            func: command,
+            args: []
+        }),
+        "*"
+    );
 }
 
-// Function to toggle mute
-muteBtn.onclick = function () {
+// Mute/Unmute Button
+muteBtn.addEventListener("click", function () {
+    if (isMuted) {
+        sendCommandToPlayer("unMute");
+        muteBtn.textContent = "🔊";
+    } else {
+        sendCommandToPlayer("mute");
+        muteBtn.textContent = "🔇";
+    }
     isMuted = !isMuted;
-    ytplayer.src = `https://www.youtube.com/embed/${YT_VIDEO_ID}?autoplay=1&mute=${isMuted ? 1 : 0}`;
-    muteBtn.textContent = isMuted ? "🔇" : "🔊";
-};
-
-// Auto play music (unmuted) when page loads
-playMusic();
-
-// When countdown ends, play music again (unmuted)
-if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "CHÚC MỪNG NĂM MỚI";
-    playMusic();
-}
+});
