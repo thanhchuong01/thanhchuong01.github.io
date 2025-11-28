@@ -29,7 +29,10 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "CHÚC MỪNG NĂM MỚI";
+        const countdownEl = document.getElementById("countdown");
+        countdownEl.textContent = "Chúc Mừng Năm Mới!";
+        countdownEl.classList.add("montserrat-font", "text", "ephesis-regular");
+        countdownEl.classList.remove("time-box", "jaro-font", "countdown");
     }
 }, 1000);
 
