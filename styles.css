@@ -12,7 +12,7 @@ body {
     
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    background-image: url('./assets/sg-11134201-7rbka-lo9ek8s1tepc.png'); ;
+    background-image: url('./assets/b6f253a9af8349b3841f9683515c38f7_master.png'); ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body {
     margin-top: 1rem;
     /* max-width: 800px;
     max-height: max-content; */
-    color: #f51a16;
+    color: #ffee00;
     font-weight: 700;
     text-shadow: 4px 4px 3px #333;
     font-size: 11rem;
@@ -80,7 +80,7 @@ body {
 
 .time-unit{
     font-size: 3rem;
-    color: rgb(241, 166, 66);
+    color: rgb(255, 234, 0);
     text-align: center;
     text-shadow: 2px 2px  rgb(99, 5, 5);
 }
