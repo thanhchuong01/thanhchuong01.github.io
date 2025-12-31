@@ -99,6 +99,13 @@ body {
 
 }
 
+.department {
+    padding-top: 3rem;
+    font-size: 3rem;
+    color: #ffee00;
+    font-weight: 700;
+    text-shadow: 4px 4px 3px #333;
+}
 
 @media (max-width: 768px) {
     .time-box {
